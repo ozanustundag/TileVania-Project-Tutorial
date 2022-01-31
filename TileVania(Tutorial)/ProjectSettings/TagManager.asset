@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -11,15 +12,15 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Climbing
+  - Player
+  - Background
+  - Bouncing
+  - Enemies
+  - Hazards
+  - Bullets
+  - Interactables
   - 
   - 
   - 
@@ -40,4 +41,31 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2106967857
+    locked: 0
+  - name: Water
+    uniqueID: 3325495391
+    locked: 0
+  - name: Platforms
+    uniqueID: 1066659809
+    locked: 0
+  - name: Climbing
+    uniqueID: 4252723069
+    locked: 0
+  - name: Hazards
+    uniqueID: 1216795365
+    locked: 0
+  - name: Bullets
+    uniqueID: 2778677355
+    locked: 0
+  - name: Interactables
+    uniqueID: 3772019993
+    locked: 0
+  - name: Enemies
+    uniqueID: 2622830605
+    locked: 0
+  - name: Player
+    uniqueID: 926556973
     locked: 0
