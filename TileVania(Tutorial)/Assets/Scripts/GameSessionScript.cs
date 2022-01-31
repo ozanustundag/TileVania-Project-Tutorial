@@ -34,11 +34,11 @@ public class GameSessionScript : MonoBehaviour
     {
         if (playerLives>1)
         {
-            TakeLife();
+           StartCoroutine(TakeLife());
         }
         else
         {
-            ResetGameSession();
+          StartCoroutine(ResetGameSession());
         }
      
     }
@@ -48,15 +48,17 @@ public class GameSessionScript : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    void TakeLife()
+    IEnumerator TakeLife()
     {
         playerLives--;
+        yield return new WaitForSecondsRealtime(2);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         livesText.text = playerLives.ToString();
     }
 
-    void ResetGameSession()
+    IEnumerator ResetGameSession()
     {
+        yield return new WaitForSecondsRealtime(3);
         FindObjectOfType<ScenePersistScript>().ResetScenePersist();
         SceneManager.LoadScene(0);
         Destroy(gameObject);
